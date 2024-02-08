@@ -6,7 +6,7 @@ plugins {
 	id 'org.parchmentmc.librarian.forgegradle' version '1.+'
 }
 
-version = mod_version + "+mc" + minecraft_version
+version = mod_version + "-forge+mc" + minecraft_version
 group = mod_group_id
 
 base {
@@ -160,27 +160,22 @@ tasks.named('processResources', ProcessResources).configure {
 	}
 }
 
-// Example for how to get properties into the manifest for reading at runtime.
+// Set up MANIFEST.MF and include license
 tasks.named('jar', Jar).configure {
 	manifest {
 		attributes([
-			'Specification-Title'   : mod_id,
-			'Specification-Vendor'  : mod_authors,
-			'Specification-Version' : '1', // We are version 1 of ourselves
-			'Implementation-Title'  : project.name,
-			'Implementation-Version': project.jar.archiveVersion,
-			'Implementation-Vendor' : mod_authors
+			'Specification-Title'       : mod_id,
+			'Specification-Vendor'      : mod_authors,
+			'Specification-Version'     : '1', // We are version 1 of ourselves
+			'Implementation-Title'      : project.name,
+			'Implementation-Version'    : project.jar.archiveVersion,
+			'Implementation-Vendor'     : mod_authors,
+			'Implementation-Description': mod_description
 		])
 	}
-
-	// This is the preferred method to reobfuscate your jar file
-	finalizedBy 'reobfJar'
+	from("LICENSE") {
+	}
 }
-
-// However if you are in a multi-project build, dev time needs unobfed jar files, so you can delay the obfuscation until publishing by doing:
-// tasks.named('publish').configure {
-//     dependsOn 'reobfJar'
-// }
 
 // Example configuration to allow publishing using the maven-publish plugin
 publishing {

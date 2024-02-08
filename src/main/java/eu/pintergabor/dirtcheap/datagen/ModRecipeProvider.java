@@ -12,7 +12,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 
 public class ModRecipeProvider extends RecipeProvider implements IConditionBuilder {
-
 	public ModRecipeProvider(PackOutput pOutput) {
 		super(pOutput);
 	}
