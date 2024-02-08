@@ -1,4 +1,4 @@
-# Minecraft Fabric DirtCheap Mod
+# Minecraft Forge DirtCheap Mod
 
 Dirt must be dirt cheap. But in Minecraft cobblestone is cheaper than dirt, because it is free.
 
@@ -14,7 +14,8 @@ Standard MIT license. Feel free to learn from it and incorporate it in your own 
 
 ## Source code
 
-Available on [GitLab](https://gitlab.com/pintergabor/dirtcheap.git) or on [GitHub](https://github.com/pinter-gabor-at/dirtcheap.git).
+Fabric: on [GitLab](https://gitlab.com/pintergabor/dirtcheap.git) or on [GitHub](https://github.com/pinter-gabor-at/dirtcheap.git).  
+Forge: on [GitLab](https://gitlab.com/pintergabor/dirtcheap-forge.git) or on [GitHub](https://github.com/pinter-gabor-at/dirtcheap-forge.git).
 
 ## For developers
 
@@ -23,3 +24,7 @@ Tutorials, written by experts, with years of experience programming on that plat
 This is why I decided to make my first, very simple, Minecraft mods publicly available.
 
 This mod is probably the simplest possible which adds something usable to Minecraft. The source code is short, and fully documented. It is a good starting point for anyone new to modding.  
+
+## See also
+
+My other mods on [Modrinth](https://modrinth.com/user/pinter.gabor) and on [CurseForge](https://www.curseforge.com/members/pintergabor/projects).
